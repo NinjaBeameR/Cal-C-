@@ -17,7 +17,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:n_calc/ui_helper.dart';
+=======
+import 'ui_helper.dart';
+>>>>>>> 9008d49 (Seperator Update)
 import 'package:function_tree/function_tree.dart';
 
 void main() {
@@ -116,7 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                           child: Center(
                             key: ValueKey<String>(all_main),
+<<<<<<< HEAD
                               child: nothingtext(all_main, 50, align: TextAlign.center)
+=======
+                              child: nothingtext(formatWithSeparator(all_main), 50, align: TextAlign.center)
+>>>>>>> 9008d49 (Seperator Update)
                           )
                         ),
                         AnimatedSwitcher(
@@ -126,7 +134,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             },
                             child: Center(
                                 key: ValueKey<String>(sub),
+<<<<<<< HEAD
                                 child: nothingtext(sub, 25, align: TextAlign.center)
+=======
+                                child: nothingtext(formatWithSeparator(sub), 25, align: TextAlign.center)
+>>>>>>> 9008d49 (Seperator Update)
                             )
                         ),
                       ],

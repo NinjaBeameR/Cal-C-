@@ -148,3 +148,25 @@ class _CoreButtonState extends State<CoreButton>
     );
   }
 }
+<<<<<<< HEAD
+=======
+
+String formatWithSeparator(String text) {
+  if (text.isEmpty) return '';
+  // Remove any existing commas
+  text = text.replaceAll(',', '');
+  // Handle negative numbers
+  bool isNegative = text.startsWith('-');
+  if (isNegative) text = text.substring(1);
+
+  // Handle decimals
+  if (text.contains('.')) {
+    final parts = text.split('.');
+    final intPart = NumberFormat.decimalPattern('en_IN').format(int.tryParse(parts[0]) ?? 0);
+    return (isNegative ? '-' : '') + '$intPart.${parts[1]}';
+  } else {
+    final intPart = NumberFormat.decimalPattern('en_IN').format(int.tryParse(text) ?? 0);
+    return (isNegative ? '-' : '') + intPart;
+  }
+}
+>>>>>>> 9008d49 (Seperator Update)
